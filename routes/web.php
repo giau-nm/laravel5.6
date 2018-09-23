@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::resource('configs', 'ConfigController');
+Route::get('configs', 'ConfigController@index')->name('configs.index');
+Route::post('configs/udpate/{id}', 'ConfigController@update')->name('configs.update');
+Route::get('searchs/index', 'SearchController@index')->name('searchs.index');
